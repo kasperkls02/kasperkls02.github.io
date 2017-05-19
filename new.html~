@@ -8,19 +8,30 @@ Kasper Læssø Sørensen<!DOCTYPE html>
 		<script>      	
 			var selectFruit = ["c Major", "c#/Db Major", "d Major", "d#/Eb Major", "e Major", "f Major", "f#/Gb Major", "g Major", "g#/Ab Major", "a Major", "a#/Bb/b Major", "h/b Major", "c Minor", "c#/Db Minor", "d Minor", "d#/Eb Minor", "e Minor", "f Minor", "f#/Gb Minor", "g Minor", "g#/Ab Minor", "a Minor", "a#/Bb/b Minor", "h/b Minor"];
 			function pick() {		
-				var todaysFruit = selectFruit[Math.floor(Math.random() * 24)];
-				alert(todaysFruit)
-			}	
+				var note = selectFruit[Math.floor(Math.random() * 24)];
+				document.getElementById("demo").innerHTML = note;
+			}
+			function show_image(src, width, height, alt) {
+  				var img = document.createElement("img");
+    			img.src = src;
+			    img.width = width;
+			    img.height = height;
+    			img.alt = alt;
+
+    // This next line will just add it to the <body> tag
+   				 document.body.appendChild(img);
+}
 		</script>
 			</br>
 			</br>
 			</br>
 			<button onclick="pick()">Random Node</button>
+			<p id="demo"></P>
+<button onclick=
+    "show_image('cirkel.jpg', 276,276, 'Google Logo');">Show cirkel</button> 
 			</br>
 			</br>
 			</br>
 			<img src="cirkel.jpg">
-			
 	</body>
-
 </html> 
