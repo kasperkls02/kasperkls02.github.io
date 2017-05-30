@@ -4,42 +4,46 @@ Kasper Læssø Sørensen<!DOCTYPE html>
 		<title>Random node</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
 	</head>
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-6273891343617195",
-    enable_page_level_ads: true
-  });
-</script>
+	
 	<body>
-		<script>      	
-			var selectFruit = ["c Major", "c#/Db Major", "d Major", "d#/Eb Major", "e Major", "f Major", "f#/Gb Major", "g Major", "g#/Ab Major", "a Major", "a#/Bb/b Major", "h/b Major", "c Minor", "c#/Db Minor", "d Minor", "d#/Eb Minor", "e Minor", "f Minor", "f#/Gb Minor", "g Minor", "g#/Ab Minor", "a Minor", "a#/Bb/b Minor", "h/b Minor"];
+		<script>  
+			var imageshow = false;    	
+			var selectFruit = ["c-Major", "c#/Db-Major", "d-Major", "d#/Eb-Major", "e-Major", "f-Major", "f#/Gb-Major", "g-Major", "g#/Ab-Major", "a-Major", "a#/Bb/b-Major", "h/b-Major", "c-Minor", "c#/Db-Minor", "d-Minor", "d#/Eb-Minor", "e-Minor", "f-Minor", "f#/Gb-Minor", "g-Minor", "g#/Ab-Minor", "a-Minor", "a#/Bb/b-Minor", "h/b-Minor"];
 			function pick() {		
 				var note = selectFruit[Math.floor(Math.random() * 24)];
 				document.getElementById("demo").innerHTML = note;
 			}
-			function show_image(src, width, height, alt) {
+			function show_image(src, width, height, alt, id) {
+				if(!imageshow){
   				var img = document.createElement("img");
     			img.src = src;
 			    img.width = width;
 			    img.height = height;
     			img.alt = alt;
+				img.id = id;
 
     // This next line will just add it to the <body> tag
    				 document.body.appendChild(img);
-}
+				imageshow = true;
+				document.getElementById("but").innerText="Hide cicle";
+				}
+				else{
+					var im = document.getElementById('cirkel');
+					im.parentNode.removeChild(im);
+				imageshow = false;
+				document.getElementById("but").innerText="Show circle";
+				}
+			}
 		</script>
-			<img style="max-width:100%" src="http://eschooltoday.com/ecosystems/images/the-nitrogen-cycle-for-children.jpg#tl-826791632727703554;1043138249'" class="alwaysThinglink"/><script async charset="utf-8" src="//cdn.thinglink.me/jse/embed.js"></script>
-			</br>
+		
 			</br>
 			</br>
 			<button onclick="pick()">Random Node</button>
 			<p id="demo"></P>
-<button onclick=
-    "show_image('cirkel.jpg', 276,276, 'Google Logo');">Show cirkel</button> 
+			<button id="but" onclick="show_image('cirkel.jpg', 276,276, 'Google Logo', 'cirkel');">Show image</button> 
 			</br>
 			</br>
 			</br>
-			<img src="cirkel.jpg">
+			
 	</body>
 </html> 
