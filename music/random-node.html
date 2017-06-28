@@ -2,14 +2,14 @@
 <html>
 	<head>
 		<title>Random node</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	</head>
-	
+
 	<body>
-		<script>  
-			var imageshow = false;    	
+		<script>
+			var imageshow = false;
 			var selectFruit = ["c-Major", "c#/Db-Major", "d-Major", "d#/Eb-Major", "e-Major", "f-Major", "f#/Gb-Major", "g-Major", "g#/Ab-Major", "a-Major", "a#/Bb/b-Major", "h/b-Major", "c-Minor", "c#/Db-Minor", "d-Minor", "d#/Eb-Minor", "e-Minor", "f-Minor", "f#/Gb-Minor", "g-Minor", "g#/Ab-Minor", "a-Minor", "a#/Bb/b-Minor", "h/b-Minor"];
-			function pick() {		
+			function pick() {
 				var note = selectFruit[Math.floor(Math.random() * 24)];
 				document.getElementById("demo").innerHTML = note;
 			}
@@ -35,18 +35,18 @@
 				}
 			}
 		</script>
-		
+
 			</br>
 
-			<a href="../index.html">Tilbage til forsiden</a>
+			<a href="../index.htm">Tilbage til forsiden</a>
 
 			</br>
 			<button onclick="pick()">Random Node</button>
 			<p id="demo"></P>
-			<button id="but" onclick="show_image('cirkel.jpg', 276,276, 'Google Logo', 'cirkel');">Show image</button> 
+			<button id="but" onclick="show_image('cirkel.jpg', 276,276, 'Google Logo', 'cirkel');">Show image</button>
 			</br>
 			</br>
 			</br>
-			
+
 	</body>
-</html> 
+</html>
