@@ -22,9 +22,9 @@
             <!-- Menu Items -->
             <div>
                 <ul class="nav navbar-nav">
-                    <li><a id="Home" href="#">Home</a></li>
-                    <li><a id="About" href="#">About</a></li>
-                    <li><a id="random-node" href="#">Random node</a></li>
+                    <li><a id="Home" href="#" onclick="Home()">Home</a></li>
+                    <li><a id="About" href="#" onclick="About()">About</a></li>
+                    <li><a id="randomnote" href="#" onclick="randomnote()">Random note</a></li>
 
                     <!-- drop down menu -->
                     <li class="dropdown">
@@ -36,36 +36,13 @@
                         </ul>
                     </li>
                 </ul>
-
                 <!--right align -->
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">Logout</a></li>
                 </ul>
-
             </div>
-
         </div>
     </nav>
-
-
-
-
   <div id="include"></div>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript">
-      $("#About").click(function(){
-          $("#include").load("pages/About.htm");
-      });
-  </script>
-  <script type="text/javascript">
-      $("#Home").click(function(){
-          $("#include").load("pages/Home.htm");
-      });
-  </script>
-  <script type="text/javascript">
-      $("#random-node").click(function(){
-          $("#include").load("music/random-node.html");
-      });
-  </script>
 </body>
 </html>
