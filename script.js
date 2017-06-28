@@ -1,4 +1,3 @@
-
 function Home() {
     $("#include").load("pages/Home.htm");
 }
