@@ -9,3 +9,14 @@ function About() {
 function randomnote() {
     $("#include").load("music/random-note.html");
 }
+
+function beregnere() {
+    $("#include").load("beregnere/beregnere.html");
+}
+
+calculate = function()
+{
+    var resources = document.getElementById('a1').value;
+    var minutes = document.getElementById('a2').value; 
+    document.getElementById('a3').value = parseInt(resources)*parseInt(minutes);
+}
