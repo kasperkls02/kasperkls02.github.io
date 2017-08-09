@@ -18,11 +18,20 @@ function addition_site() {
     $("#include").load("beregnere/math/addition.html");
 }
 
-
+function cirkel_area_site() {
+    $("#include").load("beregnere/math/cirkel_area.html");
+}
 
 calculate = function()
 {
     var resources = document.getElementById('a1').value;
     var minutes = document.getElementById('a2').value;
-    document.getElementById('a3').value = parseInt(resources)+parseInt(minutes);
+    document.getElementById('a3').value = parseFloat(resources)+parseFloat(minutes);
+}
+
+calculate_cirkel_area = function()
+{
+    var radius = document.getElementById('r').value;
+    var pi = document.getElementById('pi').value;
+    document.getElementById('a3').value = parseFloat(radius)*parseFloat(radius)*parseFloat(pi);
 }
