@@ -57,3 +57,22 @@ calculate_sphere_area = function(){
 	surArea = 4*pi*radius;
 
 }
+
+
+
+
+
+//javascript for /beregnere/math/circle.html
+
+function circle_input_type_radius() {
+  document.getElementById('input1').innerHTML = "Radius";
+}
+function circle_input_type_diameter() {
+  document.getElementById('input1').innerHTML = "Diameter";
+}
+function circle_input_type_circumference() {
+  document.getElementById('input1').innerHTML = "Circumference";
+}
+function circle_input_type_area() {
+  document.getElementById('input1').innerHTML = "Area";
+}
