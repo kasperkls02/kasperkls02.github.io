@@ -32,6 +32,16 @@ calculate = function()
 calculate_cirkel_area = function()
 {
     var radius = document.getElementById('r').value;
+    var Area = document.getElementById('Area').value;
     var pi = document.getElementById('pi').value;
-    document.getElementById('a3').value = parseFloat(radius)*parseFloat(radius)*parseFloat(pi);
+if (!pi.match(/\S/))
+    pi = 3.141592653589;
+
+if (radius.match(/\S/)) {
+    document.getElementById('Area').value = parseFloat(radius)*parseFloat(radius)*parseFloat(pi);
+} else if (Area.match(/\S/)) {
+    document.getElementById('r').value = Math.sqrt(parseFloat(Area)/parseFloat(pi));
+}
+
+
 }
