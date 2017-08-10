@@ -79,7 +79,10 @@ function circle_input_type_area() {
 <!--
 function circle_calculate() {
 if (document.getElementById('rradius').checked) {
-  document.getElementById('circle_output').innerHTML = '<h2>Output</h2>';
+  var radius = document.getElementById('input_1').value;
+  document.getElementById('circle_output').innerHTML = '<h2>Output</h2><p>Diameter</p><input id="circle_output_diameter"/><p>Circumference</p><input id="circle_output_circumference"/>';
+  document.getElementById('circle_output_diameter').value = parseFloat(radius)*2;
+  document.getElementById('circle_output_circumference').value = parseFloat(radius)*2*Math.PI;
 } else if (document.getElementById('rdiameter').checked) {
 
 } else if (document.getElementById('rcircum').checked) {
