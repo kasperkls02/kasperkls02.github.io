@@ -13,48 +13,28 @@
       <div class="jumbotron">
         <div align="center">
           <h2>Choice one input</h2>
-          <input name="choyce" type="radio" onclick="circle_input_type_radius()">Radius
-          <input name="choyce" type="radio" onclick="circle_input_type_diameter()">Diameter
-          <input name="choyce" type="radio" onclick="circle_input_type_circumference()">Circumference
-          <input name="choyce" type="radio" onclick="circle_input_type_area()">Area
+          <input name="choyce" type="radio" id="rradius" onclick="circle_input_type_radius()">Radius
+          <input name="choyce" type="radio" id="rdiameter" onclick="circle_input_type_diameter()">Diameter
+          <input name="choyce" type="radio" id="rcircum" onclick="circle_input_type_circumference()">Circumference
+          <input name="choyce" type="radio" id="rarea" onclick="circle_input_type_area()">Area
 
 
           <h2>Inputs</h2>
 
           <p id="input1"></p>
           <input type="text" name="" value="">
+          <p>Pi number of decimals</p>
+          <input id="pi-decimals" type="number" step="any"/>
+
+          <br><br>
+          <button type="button" onclick="circle_calculate()">Calculate</button>
+        </div>
+        <div align="center" id="circle_output">
 
         </div>
 
       </div>
     </div>
-
-
-
-
-
-    <div class="container">
-
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-
-        <div align="center">
-          <h2>Cirkel Area</h2>
-          <br>
-          <h3>only one input is needed</h3>
-          <p>Radius of cirkel</p>
-          <input id="r" type="number" step="any"/>
-          <p>Area of cirkel</p>
-          <input id="Area" type="number" step="any" name="total_amt" />
-        </br>
-          <p>Pi for calculation - if not specified 3.141592653589 is used</p>
-          <input id="pi" type="number" step="any"/>
-        </br>
-          <button type="button" onclick="calculate_cirkel_area()">calculate</button>
-
-        </div>
-
-      </div>
 
 </div> <!-- /container -->
 

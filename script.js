@@ -76,3 +76,16 @@ function circle_input_type_circumference() {
 function circle_input_type_area() {
   document.getElementById('input1').innerHTML = "Area";
 }
+<!--
+function circle_calculate() {
+if (document.getElementById('rradius').checked) {
+  document.getElementById('circle_output').innerHTML = '<h2>Output</h2>';
+} else if (document.getElementById('rdiameter').checked) {
+
+} else if (document.getElementById('rcircum').checked) {
+
+} else if (document.getElementById('rarea').checked) {
+
+}
+
+}
