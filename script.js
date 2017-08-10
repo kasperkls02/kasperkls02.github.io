@@ -35,13 +35,25 @@ calculate_cirkel_area = function()
     var Area = document.getElementById('Area').value;
     var pi = document.getElementById('pi').value;
 if (!pi.match(/\S/))
-    pi = 3.141592653589;
+    pi = Math.PI;
 
 if (radius.match(/\S/)) {
-    document.getElementById('Area').value = parseFloat(radius)*parseFloat(radius)*parseFloat(pi);
+    document.getElementById('Area').value = Math.Pow(parseFloat(radius),2)*parseFloat(pi);
 } else if (Area.match(/\S/)) {
     document.getElementById('r').value = Math.sqrt(parseFloat(Area)/parseFloat(pi));
 }
 
+
+}
+
+calculate_sphere_area = function(){
+
+	var pi = document.getElementById('pi').value;
+	if (!pi.match(/\S/))
+		pi = Math.PI;
+
+	Volume = (4/3)*pi*Math.Pow(document.getElementById('r').value,3);
+	Circumference = 2*pi*radius;
+	surArea = 4*pi*radius;
 
 }
