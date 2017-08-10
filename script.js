@@ -18,8 +18,8 @@ function addition_site() {
     $("#include").load("beregnere/math/addition.html");
 }
 
-function cirkel_area_site() {
-    $("#include").load("beregnere/math/cirkel_area.html");
+function circle_site() {
+    $("#include").load("beregnere/math/circle.html");
 }
 
 calculate = function()
