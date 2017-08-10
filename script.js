@@ -80,14 +80,28 @@ function circle_input_type_area() {
 function circle_calculate() {
 if (document.getElementById('rradius').checked) {
   var radius = document.getElementById('input_1').value;
-  document.getElementById('circle_output').innerHTML = '<h2>Output</h2><p>Diameter</p><input id="circle_output_diameter"/><p>Circumference</p><input id="circle_output_circumference"/>';
+  document.getElementById('circle_output').innerHTML = '<h2>Output</h2><p>Diameter</p><input id="circle_output_diameter"/><p>Circumference</p><input id="circle_output_circumference"/><p>Area</p><input id="circle_output_area"/>';
   document.getElementById('circle_output_diameter').value = parseFloat(radius)*2;
   document.getElementById('circle_output_circumference').value = parseFloat(radius)*2*Math.PI;
+  document.getElementById('circle_output_area').value = parseFloat(radius)*parseFloat(radius)*Math.PI;
 } else if (document.getElementById('rdiameter').checked) {
-
+  var diameter = document.getElementById('input_1').value;
+  document.getElementById('circle_output').innerHTML = '<h2>Output</h2><p>Radius</p><input id="circle_output_radius"/><p>Circumference</p><input id="circle_output_circumference"/><p>Area</p><input id="circle_output_area"/>';
+  document.getElementById('circle_output_radius').value = parseFloat(diameter)/2;
+  document.getElementById('circle_output_circumference').value = parseFloat(diameter)*Math.PI;
+  document.getElementById('circle_output_area').value = parseFloat(diameter)/2*parseFloat(diameter)/2*Math.PI;
 } else if (document.getElementById('rcircum').checked) {
-
+  var circumference = document.getElementById('input_1').value;
+  document.getElementById('circle_output').innerHTML = '<h2>Output</h2><p>Radius</p><input id="circle_output_radius"/><p>Diameter</p><input id="circle_output_diameter"/><p>Area</p><input id="circle_output_area"/>';
+  document.getElementById('circle_output_radius').value = parseFloat(circumference)/2/Math.PI;
+  document.getElementById('circle_output_diameter').value = parseFloat(circumference)/Math.PI;
+  document.getElementById('circle_output_area').value = (parseFloat(circumference)/2/Math.PI*parseFloat(circumference)/2/Math.PI)*Math.PI;
 } else if (document.getElementById('rarea').checked) {
+  var area = document.getElementById('input_1').value;
+  document.getElementById('circle_output').innerHTML = '<h2>Output</h2><p>Radius</p><input id="circle_output_radius"/><p>Diameter</p><input id="circle_output_diameter"/><p>Circumference</p><input id="circle_output_circumference"/>';
+  document.getElementById('circle_output_radius').value = Math.sqrt(parseFloat(area)/Math.PI);
+  document.getElementById('circle_output_diameter').value = Math.sqrt(parseFloat(area)/Math.PI)*2;
+  document.getElementById('circle_output_circumference').value = Math.sqrt(parseFloat(area)/Math.PI)*2*Math.PI;
 
 }
 
